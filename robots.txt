@@ -1,0 +1,74 @@
+# Nexus Arena - robots.txt
+# Controls search engine crawler access
+
+User-agent: *
+Allow: /
+Allow: /game/
+Allow: /category/
+Allow: /pc-games
+Allow: /android-games
+Allow: /mobile-games
+Allow: /browser-games
+Allow: /blog
+
+# Disallow unnecessary pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /debug/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /private/
+Disallow: /backup/
+
+# Specific rules for Google Bot (fastest indexing)
+User-agent: Googlebot
+Allow: /
+Allow: /game/
+Allow: /category/
+Allow: /blog/
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for other search engines
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+# Block bad bots
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: SputnikBot
+Disallow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Sitemap location
+Sitemap: https://nexusarena.com/sitemap.xml
+Sitemap: https://nexusarena.com/games-sitemap.xml
+
+# Cache directives
+Request-rate: 30/60  # 30 requests per 60 seconds
+
+# Crawl delay for unknown bots
+Crawl-delay: 1
